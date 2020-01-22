@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.CodeExecutor.Exceptions
+namespace CodeExecutor.Exceptions
 {
     public class CSharpCompilationException : Exception
     {

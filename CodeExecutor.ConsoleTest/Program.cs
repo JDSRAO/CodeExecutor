@@ -5,13 +5,13 @@ using System.Diagnostics;
 using System.IO;
 using System.Text;
 
-namespace CT.CodeExecutor.ConsoleTest
+namespace CodeExecutor.ConsoleTest
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var defaultNameSpace = "CT.CodeExecutor.ConsoleTest.TestFiles";
+            var defaultNameSpace = "CodeExecutor.ConsoleTest.TestFiles";
             var tests = new List<CodeExecutorTests>()
             {
                 new CodeExecutorTests { ClassName = $"{defaultNameSpace}.Test01", FileName = "Test01.cs", MethodName = "HelloWorld", Inputs = new object[] { "Hai" } },

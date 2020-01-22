@@ -1,4 +1,4 @@
-﻿using CT.CodeExecutor.Exceptions;
+﻿using CodeExecutor.Exceptions;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.CSharp;
 using Microsoft.CodeAnalysis.Emit;
@@ -11,7 +11,7 @@ using System.Reflection;
 using System.Runtime.Loader;
 using System.Text;
 
-namespace CT.CodeExecutor
+namespace CodeExecutor
 {
     public class CSharpCodeExecutor
     {

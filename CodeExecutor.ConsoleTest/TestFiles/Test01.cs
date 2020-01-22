@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.CodeExecutor.ConsoleTest.TestFiles
+namespace CodeExecutor.ConsoleTest.TestFiles
 {
     public class Test01
     {

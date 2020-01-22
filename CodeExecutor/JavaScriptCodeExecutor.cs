@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace CT.CodeExecutor
+namespace CodeExecutor
 {
     public class JavaScriptCodeExecutor
     {

@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CT.CodeExecutor\CT.CodeExecutor.csproj" />
+    <ProjectReference Include="..\CodeExecutor\CodeExecutor.csproj" />
   </ItemGroup>
 
   <ItemGroup>
