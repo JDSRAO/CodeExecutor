@@ -27,6 +27,7 @@ namespace CodeExecutor.ConsoleTest
                 var cSharpcodeExecutor = new CSharpCodeExecutor("", "", false);
                 var jsCodeExecutor = new JavaScriptCodeExecutor();
                 var testOutput = new StringBuilder();
+                var testOutputDirectory = Path.Combine(Directory.GetCurrentDirectory(), "Outputs");                
                 foreach (var test in tests)
                 {
                     Console.WriteLine($"Executing test : {test.FileName} , code type : {test.CodeType}");
@@ -54,8 +55,11 @@ namespace CodeExecutor.ConsoleTest
                     testOutput.AppendLine();
                     Console.WriteLine();
                 }
-
-                var filePath = Path.Combine(Directory.GetCurrentDirectory(), DateTime.UtcNow.ToString("yyyyMMddHHmmssffff") + ".txt");
+                if(!Directory.Exists(testOutputDirectory))
+                {
+                    Directory.CreateDirectory(testOutputDirectory);
+                }
+                var filePath = Path.Combine(testOutputDirectory, DateTime.UtcNow.ToString("yyyyMMddHHmmssffff") + ".txt");
                 File.WriteAllText(filePath, testOutput.ToString());
                 Console.WriteLine($"Test output is generated at {filePath}");
             }
