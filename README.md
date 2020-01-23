@@ -28,7 +28,16 @@ The easiest way to use these samples without using Git is to download the zip fi
 ## Usage
 - Download the latest release from [here](https://github.com/JDSRAO/CodeExecutor/releases). Edit the config.json file and run the application.bat file.
 - Alternatively download the latest [nuget package](https://www.nuget.org/packages/CodeExecutor/), install and start development.
-- Please refer [wiki](https://github.com/JDSRAO/CodeExecutor/wiki) page for documentation.
+- The API's are tailor made to meet all the common requirements.
+
+### JavaScript Interpreter 
+- The API uses [Jnit](https://github.com/sebastienros/jint) to execute JavaScript.
+- The API takes the name of the function to execute, code to execute and input arguments (if any).
+
+
+### C# Executor
+- The API uses [Roslyn](https://github.com/dotnet/roslyn) to compile and execute c# code.
+- The API takes class name with namespace, the name of the function to execute, code to execute and input arguments (if any).
 
 ## License
 Please refer [here](LICENSE) for license information
