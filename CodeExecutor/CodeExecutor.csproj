@@ -2,6 +2,17 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+    <Authors>KJDS Srinivasa Rao</Authors>
+    <Company>KJDS Srinivasa Rao</Company>
+    <Product>KJDS.CodeExecutor</Product>
+    <Description>Dynamic Code Executors</Description>
+    <PackageLicenseUrl>https://github.com/JDSRAO/CodeExecutor/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/JDSRAO/CodeExecutor</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/JDSRAO/CodeExecutor</RepositoryUrl>
+    <RepositoryType>github</RepositoryType>
+    <PackageTags>code-executor</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>
