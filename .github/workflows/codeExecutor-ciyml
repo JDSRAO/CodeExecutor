@@ -1,0 +1,44 @@
+name: Code Executor CI
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+env:
+  NETCORE_VERSION: '2.2' 
+  NUGET_PROJECT: 'CodeExecutor' 
+
+jobs:
+  build:
+    name: Build and create nuget package
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    
+    - name: Setup .NET Core ${{env.NETCORE_VERSION}}
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: ${{env.NETCORE_VERSION}}
+    
+    - name: Install dependencies
+      run: dotnet restore
+    
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+    
+    #- name: Test
+    #  run: dotnet test --no-restore --verbosity normal
+    
+    - name: Create Nuget package
+      run: dotnet pack --no-build -c Release --no-restore --output "${{ github.workspace }}/package"
+    
+    - name: Upload code executor nuget package to build artifacts
+      uses: actions/upload-artifact@v2
+      with:
+        # Artifact name
+        name: ${{env.NUGET_PROJECT}} nuget package
+        # A file, directory or wildcard pattern that describes what to upload
+        path: "${{ github.workspace }}/package"
