@@ -26,7 +26,7 @@ After cloning the respository:
 The easiest way to use these samples without using Git is to download the zip file containing the current version. You can then unzip the entire archive and use the solution in Visual Studio 2017.
 
 ## Usage
-- Download the latest release from [here](https://github.com/JDSRAO/CodeExecutor/releases). Edit the config.json file and run the application.bat file.
+- Download the latest release from [here](https://github.com/JDSRAO/CodeExecutor/releases).
 - Alternatively download the latest [nuget package](https://www.nuget.org/packages/CodeExecutor/), install and start development.
 - The API's are tailor made to meet all the common requirements.
 
